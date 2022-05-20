@@ -5,22 +5,26 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ZahidAliyev/SPAlalafail.git"
+    "url": "git+https://github.com/ZahidAliyev/LalaSPAWebpcak.git"
   },
   "author": "Zahid Aliyev",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ZahidAliyev/SPAlalafail/issues"
+    "url": "https://github.com/ZahidAliyev/LalaSPAWebpcak/issues"
   },
-  "homepage": "https://github.com/ZahidAliyev/SPAlalafail#readme",
+  "homepage": "https://github.com/ZahidAliyev/LalaSPAWebpcak#readme",
   "dependencies": {
     "express": "^4.17.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  },
   "keywords": [
     "spa",
     "webpack",

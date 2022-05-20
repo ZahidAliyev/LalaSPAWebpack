@@ -1,4 +1,4 @@
-import Header from "/Header.js";
+import Header from "./Header.js";
 import About from "./about.js";
 import {interiorGalleryData, exteriorGalleryData, landscapeGalleryData} from "./index.js";
 class Section {
@@ -31,7 +31,7 @@ class Section {
     static   addPagetoBody(page) {
       page.innerHTML = "";  
       page.insertAdjacentHTML("afterbegin", this.sectionsPageTemplate);
-      page.firstElementChild.lastElementChild.insertAdjacentHTML("beforebegin", Header.template("/logomenu.png"));
+      page.firstElementChild.lastElementChild.insertAdjacentHTML("beforebegin", Header.template("../images/logomenu.png"));
 
     }
     static replaceBGColorClass =(page, bgcolorClassNameRemove, bgcolorClassNameAdd)=> {
@@ -103,7 +103,7 @@ class Section {
       sectionBriefExplore.href = "/interior-design-gallery"
       this.changeSectionClassName(page, sectionClass, ...otherPageClassNames);
       if(document.getElementById("interior-image") === null) {
-        this.addSectiomImgAndAddToDom("div", "interior-image-wrapper", "/logopage.png", "interior-image", sectionImageWrapper);
+        this.addSectiomImgAndAddToDom("div", "interior-image-wrapper", "../images/logopage.png", "interior-image", sectionImageWrapper);
       } 
       if(toRight != null) {
         if(toRight) {// Go Home to Interior
@@ -172,7 +172,7 @@ class Section {
 
       if(toRight != null) {
         if(document.getElementById("exterior-image") === null) {
-          this.addSectiomImgAndAddToDom("div", "exterior-image-wrapper", "/logopage.png", "exterior-image", sectionImageWrapper);
+          this.addSectiomImgAndAddToDom("div", "exterior-image-wrapper", "../images/logopage.png", "exterior-image", sectionImageWrapper);
         }
         if(toRight) { // From Interior to Exterior
           //adding exterior IMAGE to the page but Not displayed yet  
@@ -245,9 +245,9 @@ class Section {
         console.log("Dom lodaded EXterior");
         this.changeBrief(interiorGalleryData.header, exteriorGalleryData.text, briefFirstName, briefSecondName, sectionBriefText);
 
-        this.addSectiomImgAndAddToDom("div", "interior-image-wrapper", "/logopage.png", "interior-image", sectionImageWrapper);
+        this.addSectiomImgAndAddToDom("div", "interior-image-wrapper", "../images/logopage.png", "interior-image", sectionImageWrapper);
         
-        this.addSectiomImgAndAddToDom("div", "exterior-image-wrapper", "/logopage.png", "exterior-image", sectionImageWrapper);
+        this.addSectiomImgAndAddToDom("div", "exterior-image-wrapper", "../images/logopage.png", "exterior-image", sectionImageWrapper);
 
         let exteriorImageWrapper = sectionImageWrapper.children[childOrder];
         //removing transition animation for removing elements back to outside & exterior image too
@@ -296,7 +296,7 @@ class Section {
       sectionBriefExplore.href = "/landscape-design-gallery";
       if(toRight) { //From Exterior to Landscape
         if(document.getElementById("landscape-image") === null) {
-          this.addSectiomImgAndAddToDom("div", "landscape-image-wrapper", "/logopage.png", "landscape-image", sectionImageWrapper);
+          this.addSectiomImgAndAddToDom("div", "landscape-image-wrapper", "../images/logopage.png", "landscape-image", sectionImageWrapper);
         }
         //adding exterior IMAGE to the page but Not displayed yet
         let exteriorImageWrapper = document.querySelector(".exterior-image-wrapper")  
@@ -336,9 +336,9 @@ class Section {
       } else {
         console.log("Null ");
         this.changeBrief(exteriorGalleryData.header, exteriorGalleryData.text, briefFirstName, briefSecondName, sectionBriefText);
-        this.addSectiomImgAndAddToDom("div", "interior-image-wrapper", "/logopage.png", "interior-image", sectionImageWrapper);
-        this.addSectiomImgAndAddToDom("div", "exterior-image-wrapper", "/logopage.png", "exterior-image", sectionImageWrapper);
-        this.addSectiomImgAndAddToDom("div", "landscape-image-wrapper", "/logopage.png", "landscape-image", sectionImageWrapper);
+        this.addSectiomImgAndAddToDom("div", "interior-image-wrapper", "../imagespage.png", "interior-image", sectionImageWrapper);
+        this.addSectiomImgAndAddToDom("div", "exterior-image-wrapper", "../images/logopage.png", "exterior-image", sectionImageWrapper);
+        this.addSectiomImgAndAddToDom("div", "landscape-image-wrapper", "../images/logopage.png", "landscape-image", sectionImageWrapper);
         //adding exterior IMAGE to the page but Not displayed yet
         // let exteriorImageWrapper = document.querySelector(".exterior-image-wrapper")  
         let exteriorImageWrapper = sectionImageWrapper.children[1];

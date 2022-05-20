@@ -72,7 +72,7 @@ body::-webkit-scrollbar {
   opacity: 0;
 }
 .background-logo {
-  background-image: url("/logopage.png");
+  background-image: url("../images/logopage.png");
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -133,7 +133,7 @@ body::-webkit-scrollbar {
 
 @media screen and (min-width: 640px) {
   .background-logo {
-    background-image: url("/logopage.png");
+    background-image: url("../images/logopage.png");
     background-size: cover;
     background-position: center;
     position: absolute;

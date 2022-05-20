@@ -1,5 +1,5 @@
-import {homePage} from "/constants.js";
-import Header from "/Header.js";
+import {homePage} from "./constants.js";
+import Header from "./Header.js";
 let replaceBGColorClass =(page, bgcolorClassNameRemove, bgcolorClassNameAdd)=> {
   page.firstElementChild.classList.remove(bgcolorClassNameRemove);
   page.firstElementChild.classList.add(bgcolorClassNameAdd);
