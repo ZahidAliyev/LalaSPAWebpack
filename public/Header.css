@@ -1,0 +1,107 @@
+.Header a {
+  text-decoration: none;
+  color: #e2c19a;
+}
+
+/*------------------------HEADER--------------------*/
+.Header {
+  display: grid;
+  height: 20vh;
+  transition: opacity 3s ease-in;
+  margin: 0 7.29%;
+  grid-template-columns: minmax(14%, 70px) 10%;
+  grid-template-rows: repeat(4, minmax(0, 100%));
+  grid-column-gap: 0.97%;
+  justify-items: center;
+  align-items: end;
+  font-family: var(--links-ff);
+  font-size: var(--fs-navbar);
+  justify-content: space-between;
+}
+
+.Header-logo {
+  grid-column: 1 / 2;
+  grid-row: 1/ 2;
+  align-self: start;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.Header-logo img{
+  margin-left: -50%;
+  margin-top: -5%;
+  max-width: 100%;
+  height: auto;
+  
+}
+.Header-services {
+  grid-column: 2 / 3;
+  grid-row: 2/ 3;
+
+  display: none;
+  position: relative;
+  z-index: 1;
+  justify-self: end;
+
+  
+}
+.Header-services_services-service {
+  position: absolute;
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 1s ease;
+  z-index: -1;
+}
+.Header-services_services-service--displayed:nth-child(2) {
+  transform: translateX(-120%);
+  opacity: 1;
+}
+.Header-services_services-service--displayed:nth-child(3) {
+  opacity: 1;
+  transform: translateX(-240%);
+}
+.Header-services_services-service--displayed:nth-child(4) {
+  opacity: 1;
+  transform: translateX(-300%);
+}
+.Header-about {
+  grid-column: 2 / 3;
+  grid-row: 3/ 4;
+  justify-self: end;
+  display: none;
+}
+
+.Header-contact {
+  grid-column: 2 / 3;
+  grid-row: 4/ 5;
+  display: none;
+  justify-self: end;
+
+}
+.Header-navs--displayed {
+  display: inherit;
+}
+
+.Header-circle_svg {
+  grid-column: 2 / 3;
+  width: 1rem;
+  height: 1rem;
+  justify-self: end;
+  
+}
+.Header-circle_svg:hover {
+  cursor: pointer;
+}
+.Header-circle_itself {
+  stroke: "";
+  stroke-width: 3;
+  fill: #e2c19a;
+}
+.Header-circle_itself:hover {
+  cursor: pointer;
+}
+.Header-circle_itself--clicked {
+  stroke: #e2c19a;
+  stroke-width: 1;
+  fill: none;
+}

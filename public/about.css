@@ -1,0 +1,604 @@
+.whole-about {
+  height: 100%;
+}
+.about {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  background-color: #e6e3db;
+  color: #b84d1d;
+  justify-content: space-between;
+}
+.header-container {
+  flex-basis: 24.35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* width: 33.9%;
+    height: 8.9%; */
+  font-family: var(--headers-ff);
+  font-size: var(--fs-about-header);
+}
+
+.orange-container {
+  flex-basis: 26.6%;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.8s ease-in;
+  transform: scaleX(0);
+}
+.orange {
+  height: 100%;
+  background-color: #b84d1d;
+}
+.orange-container--scaled {
+  transform: scaleX(100%);
+}
+.text-container {
+  flex-basis: 22.4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 14.47%;
+}
+.text-container p {
+  text-align: center;
+  padding-bottom: 1%;
+  /* font-family: var(--about-text-ff); */
+  font-size: var(--fs-about-text);
+}
+.lala-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  /* justify-content: space-around; */
+  background-color: #e6e3db;
+  color: #b84d1d;
+  overflow: hidden;
+}
+.team-navbar {
+  flex-basis: 6%;
+  background-color: #e6e3db;
+}
+.team-main-container {
+  flex-basis: 93%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.lala-name-container {
+  /* flex: 1 1 15%; */
+  transition: all 0.7s ease-in;
+  transform: translateX(-150%);
+  width: 85.42%;
+}
+.lala-name-container p {
+  /* padding: 0 9%; */
+  font-family: var(--headers-ff);
+  font-size: var(--fs-about-team-header);
+  width: 85.42%;
+}
+
+.lala-orange-container {
+  width: 85.42%;
+  background-color: #b84d1d;
+  transition: all 0.6s ease-in;
+  position: relative;
+  /* top: 100%; */
+  transform: translateX(-150%);
+  aspect-ratio: 85 / 100;
+}
+
+.lala-text-container {
+  /* flex: 1 1 30%; */
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  transition: all 0.7s ease-in;
+  transform: translateX(150%);
+  width: 85.42%;
+}
+.lala-text-container p {
+  /* font-family: var(--about-text-ff); */
+  font-size: var(--fs-about-team-text);
+}
+
+.second-about-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #e6e3db;
+  color: #b84d1d;
+  overflow: hidden;
+  position: relative;
+}
+.container-for-left-margin {
+  display: none;
+}
+.second-about-orange-container {
+  /* flex: 1 1 35.10%; */
+  background-color: #b84d1d;
+  transition: all 0.7s ease-in;
+  transform: translateX(-200%);
+  width: 85.42%;
+  aspect-ratio: 85 / 100;
+  position: absolute;
+  top: 20%;
+}
+
+.second-about-NameAndText-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 85.42%;
+}
+.second-about-name-container {
+  /* width: 56.25%; */
+  transition: all 0.7s ease-in;
+  transform: translateX(300%);
+  text-align: end;
+  position: absolute;
+  top: 6%;
+  width: 85.42%;
+}
+
+.second-about-text-container {
+  width: 85.42%;
+  transform: translateX(300%);
+  transition: all 0.7s ease-in;
+  position: absolute;
+  bottom: 2%;
+}
+
+.second-about-name-container p {
+  /* padding: 0 9%; */
+  font-family: var(--headers-ff);
+  font-size: var(--fs-about-team-header);
+}
+.second-about-text-container p {
+  /* padding: 0 9%; */
+  /* font-family: var(--about-text-ff); */
+  font-size: var(--fs-about-team-text);
+}
+
+/*------- Third About Page---------- */
+.third-about-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #e6e3db;
+  color: #b84d1d;
+  overflow: hidden;
+  position: relative;
+}
+.container-for-right-margin {
+  flex: 1 1 7.23%;
+  display: none;
+}
+.third-about-orange-container {
+  /* flex: 1 1 35.10%; */
+  background-color: #b84d1d;
+  transition: all 0.7s ease-in;
+  transform: translateX(200%);
+  width: 85.42%;
+  aspect-ratio: 85 / 100;
+  position: absolute;
+  top: 20%;
+}
+
+.third-about-NameAndText-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 85.42%;
+}
+.third-about-name-container {
+  transition: all 0.7s ease-in;
+  transform: translateX(-300%);
+  position: absolute;
+  top: 6%;
+  width: 85.42%;
+  text-align: start;
+}
+
+.third-about-text-container {
+  width: 85.42%;
+  transform: translateX(-300%);
+  transition: all 0.7s ease-in;
+  position: absolute;
+  bottom: 2%;
+}
+
+.third-about-name-container p {
+  font-family: var(--headers-ff);
+  font-size: var(--fs-about-team-header);
+}
+.third-about-text-container p {
+  /* font-family: var(--about-text-ff); */
+  font-size: var(--fs-about-team-text);
+}
+
+/* Contact */
+
+.contact {
+  height: 100vh;
+  background-color: #60605d;
+  display: flex;
+  flex-direction: column;
+}
+.contact-header {
+  flex: 1 1 25%;
+  align-self: center;
+  /* margin-top: 8%; */
+  color: #e6e3db;
+  /* letter-spacing: 0.5rem; */
+  /* margin-bottom: 6%; */
+  font-family: var(--headers-ff);
+  font-size: var(--fs-about-header);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.contact-info-wrapper {
+  flex: 1 1 35%;
+  align-self: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  align-items: center;
+  font-family: var(--links-ff);
+}
+
+.info-name-right-point {
+  align-self: center;
+  margin-top: -0.5rem;
+  margin-right: 0.5rem;
+}
+.info-name-left-point {
+  align-self: center;
+  margin-top: -0.5rem;
+  margin-left: 0.5rem;
+}
+.contact-info li:nth-child(odd) {
+  margin-bottom: 3%;
+  color: #e2c19a;
+  display: flex;
+}
+.contact-info li:nth-child(even) {
+  margin-bottom: 6%;
+  color: #e6e3db;
+}
+.contact-consultation {
+  flex: 1 1 4%;
+  margin-bottom: 0;
+}
+.contact-navbar {
+  flex-basis: 10%;
+  /* background-color: #E6E3DB; */
+}
+
+/* Animation */
+
+.container--appeared {
+  /* top: 0; */
+  transform: translateX(0);
+}
+/* Small to Large screen */
+
+@media screen and (max-width: 640px) and (min-height: 800px) {
+  .third-about-text-container {
+    bottom: 10%;
+  }
+  .second-about-text-container {
+    bottom: 10%;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  /* -------- About ---------- */
+  .whole-about {
+    height: 100%;
+  }
+  .about {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: #e6e3db;
+    color: #b84d1d;
+    justify-content: stretch;
+  }
+  .header-container {
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* width: 33.9%;
+  height: 8.9%; */
+    font-family: var(--headers-ff);
+    font-size: var(--fs-about-header);
+  }
+
+  .orange-container {
+    flex-basis: 60%;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.8s ease-in;
+    transform: scaleX(0);
+  }
+  .orange {
+    height: 100%;
+    background-color: #b84d1d;
+  }
+  .orange-container--scaled {
+    transform: scaleX(100%);
+  }
+  .text-container {
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 14.47%;
+  }
+  .text-container p {
+    text-align: center;
+    padding-bottom: 1%;
+    /* font-family: var(--about-text-ff); */
+    font-size: var(--fs-about-text);
+  }
+  .lala-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    background-color: #e6e3db;
+    color: #b84d1d;
+    overflow: hidden;
+  }
+  .team-navbar {
+    flex-basis: 12.7%;
+    background-color: #e6e3db;
+  }
+  .team-main-container {
+    flex-basis: 75.6%;
+    display: flex;
+    flex-direction: row;
+    align-items: unset;
+    justify-content: unset;
+  }
+  .lala-name-container {
+    flex: 1 1 32.45%;
+    text-align: end;
+    transition: all 0.7s ease-in;
+    transform: translateX(-150%);
+  }
+  .lala-name-container p {
+    font-family: var(--headers-ff);
+    font-size: var(--fs-about-team-header);
+  }
+
+  .lala-orange-container {
+    width: unset;
+    flex: 1 1 35.1%;
+
+    background-color: #b84d1d;
+    transition: all 0.6s ease-in;
+    position: relative;
+    top: 100%;
+    transform: translateX(0);
+    aspect-ratio: unset;
+  }
+
+  .lala-text-container {
+    flex: 1 1 32.45%;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    transition: all 0.7s ease-in;
+    transform: translateX(150%);
+  }
+  .lala-text-container p {
+    padding: 0 9%;
+    /* font-family: var(--about-text-ff); */
+    font-size: var(--fs-about-team-text);
+  }
+
+  .second-about-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #e6e3db;
+    color: #b84d1d;
+    overflow: hidden;
+    position: unset;
+  }
+  .container-for-left-margin {
+    flex: 1 1 7.23%;
+    display: unset;
+  }
+  .second-about-orange-container {
+    flex: 1 1 35.1%;
+    background-color: #b84d1d;
+    transition: all 0.7s ease-in;
+    transform: translateX(-200%);
+    width: unset;
+    aspect-ratio: unset;
+    position: static;
+  }
+
+  .second-about-NameAndText-container {
+    flex: 1 1 57.67%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: unset;
+  }
+  .second-about-name-container {
+    width: 56.25%;
+    transition: all 0.7s ease-in;
+    transform: translateX(300%);
+    position: static;
+    text-align: unset;
+  }
+
+  .second-about-text-container {
+    position: static;
+    width: 56.25%;
+    transform: translateX(300%);
+    transition: all 0.7s ease-in;
+  }
+
+  .second-about-name-container p {
+    padding: 0 9%;
+    font-family: var(--headers-ff);
+    font-size: var(--fs-about-team-header);
+    text-align: unset;
+  }
+  .second-about-text-container p {
+    padding: 0 9%;
+    /* font-family: var(--about-text-ff); */
+    font-size: var(--fs-about-team-text);
+  }
+  /* Third About Page */
+  .third-about-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #e6e3db;
+    color: #b84d1d;
+    overflow: hidden;
+    position: unset;
+  }
+  .container-for-right-margin {
+    flex: 1 1 7.23%;
+    display: unset;
+  }
+  .third-about-orange-container {
+    flex: 1 1 35.1%;
+    background-color: #b84d1d;
+    transition: all 0.7s ease-in;
+    transform: translateX(200%);
+    width: unset;
+    aspect-ratio: unset;
+    position: static;
+  }
+
+  .third-about-NameAndText-container {
+    flex: 1 1 57.67%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: unset;
+  }
+  .third-about-name-container {
+    width: 56.25%;
+    transition: all 0.7s ease-in;
+    transform: translateX(-300%);
+    position: static;
+    text-align: unset;
+  }
+
+  .third-about-text-container {
+    position: static;
+    width: 56.25%;
+    transform: translateX(-300%);
+    transition: all 0.7s ease-in;
+  }
+
+  .third-about-name-container p {
+    padding: 0 9%;
+    text-align: end;
+    font-family: var(--headers-ff);
+    font-size: var(--fs-about-team-header);
+  }
+  .third-about-text-container p {
+    padding: 0 9%;
+    /* font-family: var(--about-text-ff); */
+    font-size: var(--fs-about-team-text);
+  }
+
+  /* Contact */
+
+  .contact {
+    height: 100vh;
+    background-color: #60605d;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-header {
+    flex: 1 1 8.79%;
+    align-self: center;
+    margin-top: 4%;
+    color: #e6e3db;
+    letter-spacing: 0.5rem;
+    margin-bottom: 4%;
+    font-family: var(--headers-ff);
+    font-size: var(--fs-about-header);
+  }
+
+  .contact-info-wrapper {
+    flex: 1 1 31.48%;
+    align-self: center;
+  }
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    align-items: center;
+    font-family: var(--links-ff);
+  }
+
+  .info-name-right-point {
+    align-self: center;
+    margin-top: -0.5rem;
+    margin-right: 0.5rem;
+  }
+  .info-name-left-point {
+    align-self: center;
+    margin-top: -0.5rem;
+    margin-left: 0.5rem;
+  }
+  .contact-info li:nth-child(odd) {
+    margin-bottom: 3%;
+    color: #e2c19a;
+    display: flex;
+  }
+  .contact-info li:nth-child(even) {
+    margin-bottom: 6%;
+    color: #e6e3db;
+  }
+  .contact-consultation {
+    flex: 1 1 4.62%;
+    /* margin-bottom: 6%; */
+  }
+  .contact-navbar {
+    flex-basis: 12.7%;
+    /* background-color: #E6E3DB; */
+  }
+
+  /* Animation */
+
+  .container--appeared {
+    top: 0;
+    transform: translateX(0);
+  }
+}

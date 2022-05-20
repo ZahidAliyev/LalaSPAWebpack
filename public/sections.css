@@ -1,0 +1,663 @@
+/*--------------Sections Global----------*/
+.sections-main {
+  display: grid;
+  height: 70%;
+  margin: 0 7.29%;
+  grid-template-columns: 100%;
+  grid-template-rows: 45% 50% 5%;
+  column-gap: 0.97%;
+  color: #e2c19a;
+  align-items: center;
+  /* overflow-x: hidden; */
+  margin-bottom: auto;
+}
+/*========Sections Image element===========*/
+.section-image-wrapper {
+  grid-column: 1;
+  height: 100%; /*initially it is 59% from xd but i multiplied it by 1.14(100/87)(body height / main) */
+  display: flex;
+  /* background-color: #b84d1d; */
+  transition: all 0.6s linear;
+  position: relative;
+  left: 170%;
+  /* overflow: hidden; */
+  top: 50%;
+}
+
+/* .section-image-wrapper img {
+  max-width: 100%;
+  transition: all 0.2s linear;
+}
+.section-image-wrapper img:hover {
+  max-width: 100%;
+  cursor: pointer;
+  transform: scale(130%, 130%);
+} */
+
+.interior-image-wrapper {
+  width: 100%;
+  height: 100%;
+  /* display: none; */
+  background-color: #b84d1d;
+  transition: all 0.6s linear;
+  position: absolute;
+  overflow: hidden;
+
+}
+.interior-image-wrapper img {
+  max-width: 100%;
+  height: 100%;
+  transition: all 0.2s linear;
+  position: relative;
+}
+.interior-image-wrapper img:hover {
+  cursor: pointer;
+  transform: scale(130%, 130%);
+}
+
+
+.exterior-image-wrapper {
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: #a3d139;
+  transition: all 0.6s linear;
+  position: absolute;
+  overflow: hidden;
+}
+.exterior-image-wrapper img {
+  max-width: 100%;
+  height: 100%;
+  transition: all 0.2s linear;
+}
+.exterior-image-wrapper img:hover {
+  cursor: pointer;
+  transform: scale(130%, 130%);
+}
+
+
+.landscape-image-wrapper {
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: #7ec0cc;
+  transition: all 0.6s linear;
+  position: absolute;
+  overflow: hidden;
+}
+
+.landscape-image-wrapper img {
+  max-width: 100%;
+  height: 100%;
+  transition: all 0.2s linear;
+}
+.landscape-image-wrapper img:hover {
+  cursor: pointer;
+  transform: scale(130%, 130%);
+}
+/*---------------------section brief-------------*/
+.section-brief-wrapper {
+  grid-column: 1;
+  grid-row: 2 / 3;
+  width: 100%;
+  height:100%;
+  color: #e6e3db;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 25% 25% 40% 10%;
+  /* justify-items: center;
+  align-items: center;
+  text-align: center; */
+}
+.brief-first-name {
+  position: relative;
+  transition: all 0.7s linear;
+  left: 300%;
+  grid-row: 1 / 2;
+  /* justify-self: start; */
+  /* margain-right: 2rem; */
+  align-self: flex-end;
+  top: -400%;
+}
+
+.brief-second-name {
+  position: relative;
+  transition: all 0.8s linear;
+  left: 300%;
+  grid-row: 2 / 3;
+  /* margin-left: -1rem; */
+  /* justify-self: start; */
+  top: -400%;
+
+}
+/* .landscape-design .brief-second-name {
+  justify-self: center;
+  margin-left: 1.5rem;
+} */
+
+.section-brief-name {
+  /* height: 17.66%; */
+  font-size: var(--fs-sections-header);
+  /* margin: 0;
+  margin-bottom: auto; */
+  font-family: var(--headers-ff);
+  /* grid-row: 1; */
+  /* top: -575%; */
+  /* margin-bottom: 50%; */
+}
+
+.section-brief-wrapper a {
+  text-decoration: none;
+  color: #e6e3db;
+}
+.section-brief-text {
+  position: relative;
+  transition: all 0.9s linear;
+  left: 300%;
+  /* font-family: var(--sections-brief-text-font-family); */
+  font-size: var(--fs-sections-text);
+  /* margin-bottom: 15%; */
+
+  grid-row:  3 / 4;
+}
+.section-brief-explore {
+  position: relative;
+  transition: all 1s linear;
+  left: 300%;
+  font-family: var(--links-ff);
+  font-size: var(--fs-sections-explore);
+  font-style: italic;
+  font-weight: light;
+  grid-row: 4;
+  justify-self: end;
+}
+
+/* -----------scroll lines----------*/
+.scroll-lines {
+  display: none;
+  width: 75%;
+  grid-column: 1;
+  grid-row: 3 / 4;
+  margin-left: 12.5%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-self: center;
+  opacity: 0;
+  transition: all 1s linear;
+}
+
+.scroll-line {
+  width: 31.04%;
+  height: 0;
+  transition: all 1s linear;
+  border: 1px solid #e2c19a;
+  border-radius: 40px;
+  position: relative;
+  pointer-events: none;
+}
+
+.scroll-line:hover {
+  border: 1px solid rgb(230, 227, 219);
+  /* cursor: pointer; */
+  border-radius: 40px;
+  transform: scale(1, 1.4);
+}
+.scroll-line::after {
+  content: "";
+  padding: 15px;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+}
+/*-------------------------------------- INTERIOR ------------------*/
+
+.interior-design {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background-color 0.6s ease-in;
+  overflow: hidden;
+}
+.interior-design .scroll-line:nth-child(1) {
+  border: 1px solid #e6e3db;
+}
+
+/*---------------EXTERIOR------------------ */
+.exterior-design {
+  width: 100%;
+  height: 100vh;
+  /* background-color: rgba(57, 80, 84, 1); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background-color 0.6s ease-in;
+  overflow: hidden;
+}
+.exterior-design .scroll-line:nth-child(2) {
+  border: 1px solid #e6e3db;
+}
+/*------------------LANDSCAPE------------*/
+
+.landscape-design {
+  width: 100%;
+  height: 100vh;
+  /* background-color: rgba(57, 80, 84, 1); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background-color 0.6s ease-in;
+  overflow: hidden;
+}
+.landscape-design .Header {
+  width: 85.42%;
+  position: fixed;
+  /* position: -webkit-sticky; */
+  top: 0;
+  z-index: 100;
+}
+.landscape-design .sections-main {
+  margin-top: 20vh;
+}
+
+
+.landscape-design .scroll-line:nth-child(3) {
+  border: 1px solid #e6e3db;
+}
+/*-------------sections bg color change---------*/
+.colorForHome {
+  background-color: rgba(96, 96, 93, 1);
+}
+.colorForInterior {
+  background-color: rgba(57, 80, 84, 1);
+}
+.colorForExterior {
+  background-color: rgba(73, 54, 40, 1);
+}
+.colorForLandscape {
+  background-color: rgba(79, 83, 62, 1);
+}
+/*-----ANIMATION-------*/
+.section-image-wrapper-center {
+  left: 0%;
+}
+.section-elements-center {
+  left: 0%;
+}
+
+.scroll-lines--appear {
+  opacity: 1;
+}
+
+.section-image-wrapper-left {
+  left: -136%;
+  opacity: 0.5;
+}
+.section-elements-left {
+  left: -500%;
+}
+.section-elements-outside {
+  left: 250%;
+}
+.section-image-wrapper-left-outside {
+  transition: all 0.4s linear;
+  left: -174%;
+}
+.section-elements-NoTransition {
+  transition-duration: 0s;
+}
+.exterior-image-wrapper--outside {
+  left: 310%;
+}
+.exterior-image-wrapper--display-inherit {
+  display: inherit;
+}
+.exterior-image-wrapper--center {
+  left: 136%;
+}
+.exterior-image-wrapper--left {
+  left: 38%;
+  opacity: 0.5;
+}
+
+.landscape-image-wrapper--outside {
+  left: 350%;
+}
+.landscape-image-wrapper--display-inherit {
+  display: inherit;
+}
+.landscape-image-wrapper--center {
+  left: 174%;
+}
+/*-----Small to Large screen-------*/
+
+@media screen and (min-width: 640px) {
+  /*-----Sections-----*/
+
+  /*--------------Sections Global----------*/
+  .sections-main {
+    display: grid;
+    height: 88.7%;
+    margin: 0 7.29%;
+    grid-template-columns: repeat(12, 7.43%);
+    grid-template-rows: 93% 1fr;
+    column-gap: 0.97%;
+    color: #e2c19a;
+    align-items: center;
+    /* overflow-x: hidden; */
+    margin-bottom: 0;
+  }
+  /*========Sections Image element===========*/
+  .section-image-wrapper {
+    grid-column: 4 / 10;
+    height: 67.55%; /*initially it is 59% from xd but i multiplied it by 1.14(100/87)(body height / main) */
+    display: flex;
+    /* background-color: #b84d1d; */
+    transition: all 0.6s linear;
+    position: relative;
+    left: 170%;
+    top: 0;
+    /* overflow: hidden; */
+  }
+
+  /* .section-image-wrapper img {
+  max-width: 100%;
+  transition: all 0.2s linear;
+}
+.section-image-wrapper img:hover {
+  max-width: 100%;
+  cursor: pointer;
+  transform: scale(130%, 130%);
+} */
+
+  .interior-image-wrapper {
+    width: 100%;
+    height: 100%;
+    /* display: none; */
+    background-color: #b84d1d;
+    transition: all 0.6s linear;
+    position: absolute;
+    overflow: hidden;
+  }
+  .interior-image-wrapper img {
+    max-width: 100%;
+    height: 100%;
+    transition: all 0.2s linear;
+  }
+  .interior-image-wrapper img:hover {
+    cursor: pointer;
+    transform: scale(130%, 130%);
+  }
+
+  .exterior-image-wrapper {
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: #a3d139;
+    transition: all 0.6s linear;
+    position: absolute;
+    overflow: hidden;
+  }
+  .exterior-image-wrapper img {
+    max-width: 100%;
+    height: 100%;
+    transition: all 0.2s linear;
+  }
+  .exterior-image-wrapper img:hover {
+    cursor: pointer;
+    transform: scale(130%, 130%);
+  }
+
+  .landscape-image-wrapper {
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: #7ec0cc;
+    transition: all 0.6s linear;
+    position: absolute;
+    overflow: hidden;
+  }
+
+  .landscape-image-wrapper img {
+    max-width: 100%;
+    height: 100%;
+    transition: all 0.2s linear;
+  }
+  .landscape-image-wrapper img:hover {
+    cursor: pointer;
+    transform: scale(130%, 130%);
+  }
+  /*---------------------section brief-------------*/
+  .brief-first-name {
+    position: relative;
+    transition: all 0.7s linear;
+    left: 300%;
+    align-self: start;
+  }
+  .brief-second-name {
+    position: relative;
+    transition: all 0.8s linear;
+    left: 300%;
+  }
+  .section-brief-wrapper {
+    grid-column: 10 / 13;
+    grid-row: 1;
+    width: 100%;
+    height: 67.55%;
+    color: #e6e3db;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    justify-items: normal;
+    align-items: normal;
+
+    text-align: left;
+  }
+
+  .section-brief-wrapper p:first-of-type {
+    margin: 0;
+    margin-top: -0.9rem;
+    margin-bottom: 1.26%;
+  }
+
+  .section-brief-name {
+    height: 17.66%;
+    font-size: var(--fs-sections-header);
+    margin: 0;
+    margin-bottom: auto;
+    font-family: var(--headers-ff);
+    top: 0;
+  }
+
+  /* .section-brief-wrapper p:last-of-type {
+  font-family: "Antic Didone";
+} */
+  .section-brief-wrapper a {
+    text-decoration: none;
+    color: #e6e3db;
+    margin-bottom: -0.7rem;
+  }
+  .section-brief-text {
+    position: relative;
+    transition: all 0.9s linear;
+    left: 300%;
+    /* font-family: var(--sections-brief-text-font-family); */
+    font-size: var(--fs-sections-text);
+    margin-bottom: 4%;
+  }
+  .section-brief-explore {
+    position: relative;
+    transition: all 1s linear;
+    left: 300%;
+    font-family: var(--links-ff);
+    font-size: var(--fs-sections-explore);
+    font-style: italic;
+    font-weight: light;
+  }
+  .section-brief-explore:hover {
+    color: #e2c19a;
+  }
+  /* -----------scroll lines----------*/
+  .scroll-lines {
+    display: flex;
+    width: 75%;
+    grid-column: 5 / 9;
+    grid-row: 2;
+    margin-left: 12.5%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: end;
+    margin-bottom: 9.28%;
+    opacity: 0;
+    transition: all 1s linear;
+  }
+
+  .scroll-line {
+    width: 31.04%;
+    height: 0;
+    transition: all 1s linear;
+    border: 1px solid #e2c19a;
+    border-radius: 40px;
+    position: relative;
+    pointer-events: none;
+  }
+
+  .scroll-line:hover {
+    border: 1px solid rgb(230, 227, 219);
+    /* cursor: pointer; */
+    border-radius: 40px;
+    transform: scale(1, 1.4);
+  }
+  .scroll-line::after {
+    content: "";
+    padding: 15px;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+  }
+  /*-------------------------------------- INTERIOR ------------------*/
+
+  .interior-design {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background-color 0.6s ease-in;
+    overflow: hidden;
+  }
+  .interior-design .scroll-line:nth-child(1) {
+    border: 1px solid #e6e3db;
+  }
+
+  /*---------------EXTERIOR------------------ */
+  .exterior-design {
+    width: 100%;
+    height: 100vh;
+    /* background-color: rgba(57, 80, 84, 1); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background-color 0.6s ease-in;
+    overflow: hidden;
+  }
+  .exterior-design .scroll-line:nth-child(2) {
+    border: 1px solid #e6e3db;
+  }
+  /*------------------LANDSCAPE------------*/
+
+  .landscape-design {
+    width: 100%;
+    height: 100vh;
+    /* background-color: rgba(57, 80, 84, 1); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background-color 0.6s ease-in;
+    overflow: hidden;
+  }
+  .landscape-design .Header {
+    width: 85.42%;
+    position: fixed;
+    /* position: -webkit-sticky; */
+    top: 0;
+    z-index: 100;
+  }
+
+  .landscape-design .scroll-line:nth-child(3) {
+    border: 1px solid #e6e3db;
+  }
+  /*-------------sections bg color change---------*/
+  .colorForHome {
+    background-color: rgba(96, 96, 93, 1);
+  }
+  .colorForInterior {
+    background-color: rgba(57, 80, 84, 1);
+  }
+  .colorForExterior {
+    background-color: rgba(73, 54, 40, 1);
+  }
+  .colorForLandscape {
+    background-color: rgba(79, 83, 62, 1);
+  }
+  /*-----ANIMATION-------*/
+  .section-image-wrapper-center {
+    left: 0%;
+  }
+  .section-elements-center {
+    left: 0%;
+  }
+
+  .scroll-lines--appear {
+    opacity: 1;
+  }
+
+  .section-image-wrapper-left {
+    left: -136%;
+    opacity: 0.5;
+  }
+  .section-elements-left {
+    left: -500%;
+  }
+  .section-elements-outside {
+    left: 250%;
+  }
+  .section-image-wrapper-left-outside {
+    transition: all 0.4s linear;
+    left: -174%;
+  }
+  .section-elements-NoTransition {
+    transition-duration: 0s;
+  }
+  .exterior-image-wrapper--outside {
+    left: 310%;
+  }
+  .exterior-image-wrapper--display-inherit {
+    display: inherit;
+  }
+  .exterior-image-wrapper--center {
+    left: 136%;
+  }
+  .exterior-image-wrapper--left {
+    left: 38%;
+    opacity: 0.5;
+  }
+
+  .landscape-image-wrapper--outside {
+    left: 350%;
+  }
+  .landscape-image-wrapper--display-inherit {
+    display: inherit;
+  }
+  .landscape-image-wrapper--center {
+    left: 174%;
+  }
+
+  .landscape-design .sections-main {
+    margin-top: 11.29vh;
+  }
+
+}

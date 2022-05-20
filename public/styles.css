@@ -1,0 +1,232 @@
+@import "Header.css";
+@import "sections.css";
+@import "about.css";
+@import "gallery.css";
+@import "Project.css";
+
+:root {
+  --links-ff: "Trirong", serif;
+  --headers-ff: "Vidaloka", serif;
+  --primary-ff: "Antic Didone", serif;
+
+  --fs-navbar: clamp(1rem, 1.5vw, 2rem);
+  --fs-sections-header: clamp(2.5rem, 3.5vw + 1rem, 6rem);
+  --fs-sections-text: clamp(0.7rem, 0.8vw, 1rem);
+  --fs-sections-explore: clamp(1.2rem, 1.5vw, 2rem);
+  --fs-about-header: clamp(2rem, 4vw + 1rem, 6rem);
+  --fs-about-text: clamp(1rem, 1.2vw, 1.5rem);
+  --fs-about-team-header: 1.5rem;
+  --fs-about-team-text: 1rem;
+  --fs-project-info: 1.5rem;
+  --fs-hero: 1rem;
+  --fs-about-team-header: clamp(1.4rem, 2.2vw + 1rem, 3.5rem);
+  --fs-about-team-text: clamp(1rem, 1.2vw, 1.5rem);
+  --fs-gallery-header: clamp(2rem, 2.5vw + 1rem, 5rem);
+
+  --fcolor-about: #b84d1d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  min-height: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+body {
+  min-height: 100%;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  font-family: var(--primary-ff);
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.Link-Hover:hover {
+  color: var(--fcolor-about);
+}
+
+/*=========HOME PAGE==============================*/
+.initial-page {
+  width: 100vw;
+  height: 100vh;
+  /* background-color: rgba(96, 96, 93, 1); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  transition: opacity 3s ease-in;
+  transition: background-color 1s ease-in;
+}
+.initial-page .Header {
+  opacity: 0;
+}
+.background-logo {
+  background-image: url("/logopage.png");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  z-index: -1;
+  top: -5%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 3s ease-in;
+}
+
+/*--------------HOME PAGE-------MAIN-------------------*/
+.Hero {
+  display: grid;
+  height: 76%; /* GRID HEIGHT*/
+  margin: 0 7.29%;
+  grid-template-columns: repeat(12, 7.43%);
+  grid-template-rows: 85% 1fr;
+  column-gap: 0.97%;
+  justify-items: center;
+  align-items: end;
+  color: #e2c19a;
+  font-size: var(--fs-hero);
+}
+
+.headline {
+  text-align: center;
+  grid-column: 5 / 9;
+  letter-spacing: 0.7em;
+  opacity: 0;
+  transition: opacity 3s ease-in;
+}
+
+.headline p {
+  margin: 0;
+  padding: 0.2em 0;
+  padding-left: 1.8em;
+}
+
+.scroll {
+  text-decoration: none;
+  color: #e2c19a;
+  grid-column: 12 / 12;
+  font-family: "Trirong";
+  font-size: 1.2em;
+  border-bottom: 0.1em solid;
+  opacity: 0;
+  transition: opacity 3s ease-in;
+}
+
+/*----------Home appear animation------*/
+.home-elements-appear {
+  opacity: 1;
+}
+
+@media screen and (min-width: 640px) {
+  .background-logo {
+    background-image: url("/logopage.png");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: -1;
+    top: -2%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 3s ease-in;
+  }
+  .Header {
+    display: grid;
+    height: 11.29vh;
+    transition: opacity 3s ease-in;
+    margin: 0 7.29%;
+    grid-template-columns: repeat(12, 7.43%);
+    grid-template-rows: minmax(0, 100%);
+    grid-column-gap: 0.97%;
+    justify-items: center;
+    align-items: center;
+    font-family: var(--links-ff);
+    font-size: var(--fs-navbar);
+  }
+  .Header-logo {
+    grid-column: 1 / 2;
+    display: flex;
+    justify-content: center;
+    grid-row: 1;
+  }
+  .Header-logo img {
+    grid-column: 1 / 2;
+    max-width: 100%;
+    height: auto;
+  }
+  .Header-services {
+    grid-column: 9 / 10;
+    grid-row: 1;
+    justify-self: center;
+    display: none;
+    position: relative;
+  }
+  .Header-services_services-service {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 1s ease;
+  }
+  .Header-services_services-service--displayed:nth-child(2) {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+  .Header-services_services-service--displayed:nth-child(3) {
+    opacity: 1;
+    transform: translateY(200%);
+  }
+  .Header-services_services-service--displayed:nth-child(4) {
+    opacity: 1;
+    transform: translateY(300%);
+  }
+  .Header-about {
+    grid-column: 10 / 11;
+    grid-row: 1;
+    justify-self: center;
+
+    display: none;
+  }
+
+  .Header-contact {
+    grid-column: 11 / 12;
+    grid-row: 1;
+    justify-self: center;
+    display: none;
+  }
+  .Header-navs--displayed {
+    display: inherit;
+  }
+
+  .Header-circle_svg {
+    grid-column: 12 / 13;
+    grid-row: 1;
+    justify-content: center;
+
+    width: 1rem;
+    height: 1rem;
+  }
+  .Hero {
+    height: 88.7%; /* GRID HEIGHT*/
+    grid-template-rows: max(90%, 500px) 1fr;
+  }
+  .home-elements-appear {
+    opacity: 1;
+  }
+}

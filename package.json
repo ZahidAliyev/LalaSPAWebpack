@@ -1,0 +1,30 @@
+{
+  "name": "lalaspawebpack",
+  "version": "1.0.0",
+  "description": "Architecture p ortfolio website  for Lala Suleymanzadeh",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZahidAliyev/SPAlalafail.git"
+  },
+  "author": "Zahid Aliyev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZahidAliyev/SPAlalafail/issues"
+  },
+  "homepage": "https://github.com/ZahidAliyev/SPAlalafail#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "spa",
+    "webpack",
+    "vanilla",
+    "js"
+  ]
+}
